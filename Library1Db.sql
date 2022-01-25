@@ -103,3 +103,21 @@ SELECT Books.Id, Books.Name 'Books', Authors.Name 'Authors'
 FROM Books
 FULL JOIN Authors
 ON Books.AuthorId = Authors.Id
+
+
+SELECT Authors.Name 'Authors', Genres.Name 'Genres'  
+FROM AuthorsGenres
+FULL JOIN Authors
+ON AuthorsGenres.AuthorId = Authors.Id
+FROM AuthorsGenres
+FULL JOIN Genres
+ON AuthorsGenres.GenresId = Genres.Id
+
+
+SELECT Books.Name 'Books', Genres.Name 'Genres'  
+FROM BooksGenres
+FULL JOIN Books
+ON BooksGenres.BooksId = Books.Id
+FROM BooksGenres
+FULL JOIN Genres
+ON BooksGenres.GenresId = Genres.Id
